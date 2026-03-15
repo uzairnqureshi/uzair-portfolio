@@ -45,7 +45,7 @@
     --grid-line: rgba(0,0,0,.04);
     --blob1-bg: rgba(122,184,0,.09);
     --blob2-bg: rgba(0,153,204,.07);
-    --input-bg: #ebebе5;
+    --input-bg: #ebebe5;
     --outline-stroke: #111111;
   }
 
@@ -877,9 +877,9 @@
           Slide into my inbox — I respond within 24h (usually faster).
         </p>
         <div class="contact-links">
-          <a href="/cdn-cgi/l/email-protection#9ce9e6fdf5eedcf8f9eab2f5f3" class="contact-link-item">
+          <a href="#" class="contact-link-item" onclick="navigator.clipboard.writeText('uzair@dev.io');this.querySelector('small').textContent='Copied!';setTimeout(()=>this.querySelector('small').textContent='Email me directly',2000);return false;">
             <span class="cli-icon">📧</span>
-            <div class="cli-text"><span class="__cf_email__" data-cfemail="96e3ecf7ffe4d6f2f3e0b8fff9">[email&#160;protected]</span> <small>Email me directly</small></div>
+            <div class="cli-text">uzair&#64;dev.io <small>Email me directly</small></div>
           </a>
           <a href="#" class="contact-link-item">
             <span class="cli-icon">🐙</span>
@@ -927,7 +927,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false">
   // ── THEME TOGGLE ──
   const html = document.documentElement;
   const toggleBtn = document.getElementById('themeToggle');
@@ -1037,4 +1037,11 @@
     }
   }
 
-  )
+  // ── HIDE CURSOR ON MOBILE ──
+  if ('ontouchstart' in window) {
+    document.getElementById('cursor').style.display = 'none';
+    document.body.style.cursor = 'auto';
+  }
+</script>
+</body>
+</html>
