@@ -18,16 +18,7 @@ app.set('trust proxy', 1);
 
 // ── SECURITY MIDDLEWARE ─────────────────────────────────────────────────────
 app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc:  ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-      styleSrc:   ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com", "https://fonts.gstatic.com"],
-      fontSrc:    ["'self'", "https://fonts.gstatic.com"],
-      connectSrc: ["'self'"],
-      imgSrc:     ["'self'", "data:"],
-    }
-  }
+  contentSecurityPolicy: false
 }));
 
 app.use(cors({
